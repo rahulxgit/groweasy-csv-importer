@@ -8,6 +8,8 @@ export interface ParsedCsv {
 }
 
 export interface CrmRecord {
+  [key: string]: string | number | boolean | null | undefined;
+
   created_at: string;
   name: string;
   email: string;
