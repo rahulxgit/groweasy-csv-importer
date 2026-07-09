@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #1F2328;
+  background: #FAFAFA;
+}
+
+/* sticky header for the preview/result tables - border-collapse breaks position:sticky
+   so we use separate borders instead, bit annoying but it's the only way that works reliably */
+table.data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+table.data-table thead th {
+  position: sticky;
+  top: 0;
+  background: #F9FAFB;
+  z-index: 1;
+}

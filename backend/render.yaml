@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: groweasy-csv-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: BATCH_SIZE
+        value: 25
+      - key: FRONTEND_URL
+        sync: false
